@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<link rel="icon" href="3.ico" />
+	<title>Merry me Baixue</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<audio autoplay="true" loop=""><source src="./music/6.mp3"></audio>
+		<div class="header">
+				 <a href="#"><strong>www.baixuebx.com</strong></a>
+				 <span class="right_ab">
+						 <a href="menu.html"><strong>Back to the Main Menu</strong></a>
+				 </span>
+		 </div>
+	<div id="mainDiv">
+		<div id="mainleft">
+		</div>
+		<div id="content">
+			<div id="code">
+				<span class="comments">狐狸说：“对我来说，你只是一个小男孩，就像其他成千上万个小男孩一样没有什么两样。我不需要你。
+				你也不需要我。对你来说，我也只是一只狐狸，和其他成千上万的狐狸没有什么不同。但是，如果你驯养了我，我们就会彼此需要。
+				对我来说，你就是我的世界里独一无二的了；我对你来说，也是你的世界里的唯一了。</span><br /><br />
+			  <span class="comments">倘若一个人对一朵花情有独钟，而那花在浩瀚的星河中，是独一无二的，那么，他只要仰望繁星点点，
+					就心满意足了。他会喃喃自语：“我的花就在星河的某个角落……”。</span><br /><br />
+				<span class="comments">如果你爱上了某个星球的一朵花。那么，只要在夜晚仰望星空，就会觉得漫天的繁星就像一朵朵盛开的花。</span><br /><br />
+				<span class="comments">我会住在其中的一颗星星上面，在某一颗星星上微笑着，每当夜晚你仰望星空的时候，就会像是看到所有的星星都在微笑一般。</span><br /><br />
+				<span class="comments">也许世界上也有五千朵和你一模一样的花，但只有你是我独一无二的玫瑰。</span><br /><br />
+				<span class="comments">一旦你驯服了什么，就要对她负责，永远的负责。</span><br /><br />
+				<span class="author">----安东尼·德·圣-埃克苏佩里《小王子》</span><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Baixue, since <b>2015-6-22 01:05:00</b> </br>
+						I have fallen in love with you for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever<br/>
+						<div class="signature">- Dingzhiwei</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Thanks for <a href='http://hackerzhou.me' target="_blank">hackerzhou.me</a>'s Code |
+        Git form <a href="https://github.com/hackerzhou/Love" target="_blank"><i>Love</i></a> project. |
+        <a href="menu.html">Home</a>
+			Our Love Story - <a href="http://baixuebx.com" target="_blank">baixuebx.com
+			Copyright © 2015-2015
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2015, 5, 22);
+		together.setHours(1);
+		together.setMinutes(5);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
